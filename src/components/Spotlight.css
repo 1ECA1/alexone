@@ -1,0 +1,25 @@
+.spotlight-anchor {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: -1;        /* behind your content, above the page background */
+  pointer-events: none;
+  display: none;      /* hidden in light mode */
+}
+
+/* Only visible when <html class="dark"> */
+.dark .spotlight-anchor {
+  display: block;
+}
+
+.spotlight-beam {
+  position: absolute;
+  width: 300px;
+  left: -150px;
+  top: -43px;
+  transform-origin: 150px 43px;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
